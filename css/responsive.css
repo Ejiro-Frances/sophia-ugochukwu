@@ -1,0 +1,24 @@
+@media (min-width: 56em) {
+  .grid--2-cols {
+    grid-template-columns: 1fr 1fr;
+    gap: 3.2rem;
+  }
+  .hero-img-box {
+    grid-column: 2;
+  }
+
+  /* mobile nav */
+  .mobile-menu-btn {
+    display: none;
+  }
+  .main-nav-links {
+    position: unset;
+    transform: unset;
+    opacity: 1;
+    visibility: visible;
+    padding: unset;
+    flex-direction: row;
+    /* justify-content: center; */
+    align-items: center;
+  }
+}
