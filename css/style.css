@@ -1,0 +1,274 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+body {
+  overflow: hidden;
+  background: #eee6e6;
+  font-family: sans-serif;
+  overflow-x: hidden;
+}
+/* ********************************************** */
+/* RESET */
+/* ********************************************** */
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: inherit;
+  font-family: inherit;
+}
+/* ********************************************** */
+/* REUSEABLE STYLES */
+/* ********************************************** */
+.container {
+  max-width: 120rem;
+  margin: 0 auto;
+}
+
+.grid {
+  display: grid;
+}
+.grid--2-cols {
+  grid-template-columns: 1fr;
+  gap: 3.2rem;
+}
+.btn:link,
+.btn:visited {
+  padding: 1.2rem 2.4rem;
+  border-radius: 21px;
+  font-size: 1.6rem;
+  letter-spacing: 1px;
+}
+.btn--clr:link,
+.btn--clr:visited {
+  color: #fff;
+  background: #5c1a1b;
+  /* overflow: hidden; */
+}
+.btn--clr:hover,
+.btn--clr:active {
+  background: #2d0002;
+  /* transform: skew(5deg); */
+}
+.btn--trans:link,
+.btn--trans:visited {
+  box-shadow: inset 0 0 5px #5c1a1b;
+  background: #eee6e6;
+}
+
+.btn--trans:hover,
+.btn--trans:active {
+  box-shadow: inset 0 0 10px #2d0002;
+}
+/* ********************************************** */
+/* HELPER CLASSES */
+/* ********************************************** */
+.margin-right-sm {
+  margin-right: 10px;
+}
+
+/* ********************************************** */
+/* HEADER SECTION */
+/* ********************************************** */
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 1.2rem 3.2rem;
+
+  position: relative;
+  z-index: 1001;
+}
+
+.logo {
+  z-index: 1000000;
+  font-size: 2rem;
+  font-family: cursive;
+}
+
+/* ********************************************** */
+/* MOBILE NAVIGATION */
+/* ********************************************** */
+.mobile-menu-btn {
+  border: none;
+  /* position: relative; */
+  z-index: 1000;
+}
+.mobile-menu-icon {
+  width: 32px;
+  height: 32px;
+}
+.mobile-menu-icon[name="close-outline"] {
+  display: none;
+}
+
+.nav-open .mobile-menu-icon[name="close-outline"] {
+  display: block;
+}
+
+.nav-open .mobile-menu-icon[name="grid-outline"] {
+  display: none;
+}
+/* ********************************************** */
+/* NAVIGATION */
+/* ********************************************** */
+
+.main-nav-links {
+  position: absolute;
+  top: 0;
+  left: 0;
+  top: 0;
+  list-style: none;
+  text-transform: uppercase;
+  font-size: 1.6rem;
+  /* color: #590004; */
+  letter-spacing: 1px;
+  font-weight: 600;
+
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+  padding: 3.2rem;
+
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(100%);
+  transition: all 0.4s;
+}
+.nav-open .main-nav-links {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0);
+  background: #eee6e6;
+  padding-top: 10rem;
+}
+.main-nav-link:hover,
+.main-nav-link:active {
+  color: #2d0002;
+}
+
+/* ********************************************** */
+/* HERO SECTION */
+/* ********************************************** */
+
+.hero-section {
+  padding: 3.2rem;
+}
+
+.hero-container {
+  max-width: 130rem;
+  margin: 0 auto;
+}
+.primary-paragraph {
+  font-size: 1.8rem;
+  margin-bottom: 4.8rem;
+}
+
+.primary-heading {
+  font-size: 3.2rem;
+  line-height: 1.6;
+  margin-bottom: 4.8rem;
+}
+
+.hero-img-box {
+  /* background: #531718; */
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 2px solid #531718;
+  /* border-radius: 50px; */
+  /* transform: rotate(45deg); */
+  /* margin: 0 auto; */
+  justify-self: center;
+  grid-row: 1;
+}
+.hero-img {
+  box-shadow: inset 0 0 100px rgba(255, 255, 255, 0.075) !important;
+  /* width: 180%; */
+  width: 100%;
+  height: 100%;
+  /* transform: rotate(-45deg) translate(-7rem, -15rem); */
+}
+/* ********************************************** */
+/* FEATURED SECTION */
+/* ********************************************** */
+.feature-cert-section {
+  background: #531718;
+}
+.cert-heading {
+  color: #fff;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 2.4rem 0;
+}
+.img-cert-container {
+  display: flex;
+  gap: 1.6rem;
+  padding: 1.2rem 0;
+}
+.cert-img {
+  width: 100px;
+  height: 40px;
+}
+
+/* ********************************************** */
+/* PRODUCTS SECTION */
+/* ********************************************** */
+.product-section {
+  padding: 4.8rem 3.4rem;
+}
+
+.product-container {
+  min-height: 30rem;
+  background: #5c1a1b;
+  border-radius: 11px;
+  overflow: hidden;
+}
+.product-text {
+  margin-top: 60%;
+  background: #fff;
+  padding: 2.4rem;
+}
+.product-description {
+  margin-bottom: 2.4rem;
+}
+
+/* ********************************************** */
+/* ABOUT SECTION */
+/* ********************************************** */
+.about-section {
+  padding: 3.2rem;
+  font-size: 1.6rem;
+  line-height: 2;
+}
+
+/* ********************************************** */
+/* SKILLS */
+/* ********************************************** */
+.skills {
+  padding: 3.2rem 0;
+}
+/* ********************************************** */
+/* CERTIFICATE */
+/* ********************************************** */
+.certification {
+  padding: 3.2rem 0;
+}
+/* ********************************************** */
+/* FOOTER SECTION */
+/* ********************************************** */
+.footer {
+  padding: 1.2rem;
+}
+.copyright {
+  text-align: center;
+}
