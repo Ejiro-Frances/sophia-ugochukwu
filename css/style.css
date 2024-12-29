@@ -269,6 +269,18 @@ a {
 .footer {
   padding: 1.2rem;
 }
+.footer-social-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.4rem;
+  margin-bottom: 2.4rem;
+}
+.footer-social-link {
+  height: 24px;
+  width: 24px;
+  color: #2d0002;
+}
 .copyright {
   text-align: center;
 }
